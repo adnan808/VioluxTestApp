@@ -1,0 +1,46 @@
+﻿<Window x:Class="VioluxTestApp.CommandLine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VioluxTestApp"
+        mc:Ignorable="d"
+        Title="Violux Test App - Command Line" Height="390" Width="430" MaxHeight="390" MaxWidth="430" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Width="200" HorizontalAlignment="Left" Grid.Column="0">
+            <Label  Margin="10,5,0,0" Content="Available Commands"></Label>
+            <ListBox Margin="10,0,0,0" Name="lstCommands" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Height="200" MouseDoubleClick="lstCommands_MouseDoubleClick">
+                <ListBoxItem Content="Ballast Power On"></ListBoxItem>
+                <ListBoxItem Content="Ballast Power Off"></ListBoxItem>
+                <ListBoxItem Content="Ballast Channel 0"></ListBoxItem>
+                <ListBoxItem Content="Ballast Channel 1"></ListBoxItem>
+                <ListBoxItem Content="Ballast Channel 2"></ListBoxItem>
+                <ListBoxItem Content="Ballast Channel 3"></ListBoxItem>
+            </ListBox>
+
+            <Label  Margin="10,5,0,0" Content="Prompt" ></Label>
+            <TextBox Margin="10,0,0,5" Width="180" Height="20"></TextBox>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Status"  Margin="10,5,0,0" Width="60" HorizontalAlignment="Left"></Label>
+                <TextBox Width="124" Height="20"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Response"  Margin="10,5,0,0" Width="60" HorizontalAlignment="Left"></Label>
+                <TextBox Width="124" Height="20"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Width="200" HorizontalAlignment="Left" Grid.Column="1" >
+            <Label  Margin="10,5,0,0" Content="ESP32 Program Output" ></Label>
+            <TextBox Height="314" Margin="10,0,0,13" Name="txtResponse"></TextBox>
+
+        </StackPanel>
+    </Grid>
+
+</Window>

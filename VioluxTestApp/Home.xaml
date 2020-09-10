@@ -1,0 +1,41 @@
+﻿<Window x:Class="VioluxTestApp.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VioluxTestApp"
+        mc:Ignorable="d"
+        Title="Home" Height="1920" Width="1080" WindowState="Maximized">
+    <Grid>
+
+
+        
+        
+
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Settings">
+                    <MenuItem Header="_Com Ports" Click="MenuItem_Click" />
+                   
+                </MenuItem>
+            </Menu>
+            <TextBox AcceptsReturn="True" />
+        </DockPanel>
+        <Button Name="btnHWSim" Content="Hardware Simulator" Margin="26,20,25,20" Grid.Row="0" Grid.Column="0" Click="btnHWSim_Click" ></Button>
+        <Button Name="btnTestFix" Content="Test Fixture" Margin="25,20,25,20" Grid.Row="0" Grid.Column="1" Click="btnTestFix_Click"></Button>
+        <Button Name="btnAgingSim" Content="Aging Simulator" Margin="25,20,25,20" Grid.Row="1" Grid.Column="0" Click="btnAgingSim_Click"></Button>
+        <Button Name="btnCmdLine" Content="Command Line" Margin="25,20,25,20" Grid.Row="1" Grid.Column="1" Click="btnCmdLine_Click"></Button>
+
+
+
+    </Grid>
+</Window>
