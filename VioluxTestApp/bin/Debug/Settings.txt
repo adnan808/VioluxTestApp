@@ -1,0 +1,4 @@
+COM1
+COM6
+COM1
+COM1
